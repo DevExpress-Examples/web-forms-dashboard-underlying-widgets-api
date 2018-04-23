@@ -1,0 +1,1 @@
+﻿<%@ Application Codebehind="Global.asax.vb" Inherits="ASPxDashboard_UnderlyingWidgets.Global_asax" Language="vb" %>
