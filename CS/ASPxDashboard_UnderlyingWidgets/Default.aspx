@@ -15,13 +15,14 @@
     <div style="position:absolute; left:0; right:0; top:0; bottom:0;">
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
             WorkingMode="Viewer"
-            Height="100%" Width="100%"
-            ClientSideEvents-ItemWidgetCreated="function(s, e) { customizeWidgets(e); }"  
-            ClientSideEvents-ItemWidgetUpdated="function(s, e) { customizeWidgets(e); }"  
-            ClientSideEvents-ItemWidgetUpdating="function(s, e) { unsubscribeFromEvents(e); }">
+            Height="100%" Width="100%">
+            <ClientSideEvents
+                ItemWidgetCreated="function(s, e) { customizeWidgets(s, e); }" 
+                ItemWidgetUpdated="function(s, e) { customizeWidgets(s, e); }" 
+                ItemWidgetUpdating="function(s, e) { unsubscribeFromEvents(s, e); }" />
         </dx:ASPxDashboard>
     </div>
     </form>
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/WidgetsCustomization.js") %>"></script>    
 </body>
 </html>
-<script type="text/javascript" src="<%= Page.ResolveClientUrl("~/Scripts/WidgetsCustomization.js") %>"></script>

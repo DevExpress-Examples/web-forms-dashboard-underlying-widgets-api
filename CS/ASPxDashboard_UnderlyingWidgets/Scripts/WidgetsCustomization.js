@@ -1,4 +1,4 @@
-function customizeWidgets(args) {
+function customizeWidgets(sender, args) {
     if (args.ItemName == "gridDashboardItem1") {
         var grid = args.GetWidget();
         grid.option({
@@ -29,7 +29,7 @@ function customizeWidgets(args) {
     }
 }
 
-function unsubscribeFromEvents(args) {
+function unsubscribeFromEvents(sender, args) {
     if (args.ItemName == "chartDashboardItem1") {
         var chart = args.GetWidget();
         chart.option({
