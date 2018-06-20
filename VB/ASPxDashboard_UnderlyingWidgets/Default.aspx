@@ -23,6 +23,6 @@
         </dx:ASPxDashboard>
     </div>
     </form>
-    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/Scripts/WidgetsCustomization.js")%>"></script>
+    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/Scripts/WidgetsCustomization.js")%>"></script>    
 </body>
 </html>
