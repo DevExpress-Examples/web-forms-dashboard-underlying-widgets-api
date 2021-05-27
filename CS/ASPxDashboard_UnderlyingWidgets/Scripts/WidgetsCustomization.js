@@ -1,39 +1,35 @@
-function customizeWidgets(sender, args) {
-    if (args.ItemName == "gridDashboardItem1") {
-        var grid = args.GetWidget();
-        grid.option({
-            hoverStateEnabled: true
-        });
-    }
-    if (args.ItemName == "chartDashboardItem1") {
-        var chart = args.GetWidget();
-        chart.option({
-            tooltip: {
-                enabled: false
-            },
-            onArgumentAxisClick: function (info) {
-                info.component.getAllSeries()[0].getPointsByArg(info.argument)[0].showTooltip()
-            }
-        });
-    }
-    if (args.ItemName == "pieDashboardItem1") {
-        var pie = args.GetWidget()[0];
-        pie.option({
-            legend: {
-                visible: true,
-                border: {
-                    visible: true
-                }
-            }
-        });
-    }
+function onBeforeRender(s, e) {
+    var dashboardControl = s.GetDashboardControl();
+    var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+    if (viewerApiExtension)
+        viewerApiExtension.on('itemWidgetOptionsPrepared', customizeWidgetOptions);
 }
-
-function unsubscribeFromEvents(sender, args) {
-    if (args.ItemName == "chartDashboardItem1") {
-        var chart = args.GetWidget();
-        chart.option({
-            onArgumentAxisClick: undefined
-        });
+function customizeWidgetOptions(e) {
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GridItem) {
+        e.options.hoverStateEnabled = true
+    };
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.ChartItem) {
+        e.options.tooltip = {
+            enabled: false
+        };
+        e.options.animation = {
+            enabled: true,
+            duration: 1000
+        };
+        e.options.onArgumentAxisClick = function (info) {
+            info.component.getAllSeries()[0].getPointsByArg(info.argument)[0].showTooltip()
+        }
+    };
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.PieItem) {
+        e.options.legend = {
+            visible: true,
+            border: {
+                visible: true
+            }
+        };
+        e.options.animation = {
+            enabled: true,
+            duration: 1000
+        };
     }
 }

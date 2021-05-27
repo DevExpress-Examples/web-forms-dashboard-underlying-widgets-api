@@ -1,14 +1,15 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" 
     Inherits="ASPxDashboard_UnderlyingWidgets.Default" %>
 
-<%@ Register Assembly="DevExpress.Dashboard.v16.2.Web, Version=16.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
+<%@ Register Assembly="DevExpress.Dashboard.v21.1.Web.WebForms, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
     Namespace="DevExpress.DashboardWeb" TagPrefix="dx" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Web Dashboard</title>
+    <script src="Scripts/WidgetsCustomization.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,13 +17,9 @@
         <dx:ASPxDashboard ID="ASPxDashboard1" runat="server" 
             WorkingMode="Viewer"
             Height="100%" Width="100%">
-            <ClientSideEvents
-                ItemWidgetCreated="function(s, e) { customizeWidgets(s, e); }" 
-                ItemWidgetUpdated="function(s, e) { customizeWidgets(s, e); }" 
-                ItemWidgetUpdating="function(s, e) { unsubscribeFromEvents(s, e); }" />
+            <ClientSideEvents BeforeRender="onBeforeRender" />  
         </dx:ASPxDashboard>
     </div>
     </form>
-    <script type="text/javascript" src="<%=Page.ResolveClientUrl("~/Scripts/WidgetsCustomization.js")%>"></script>    
 </body>
 </html>

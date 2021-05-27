@@ -2,8 +2,7 @@
 <Dashboard>
   <Title Text="Dashboard" />
   <DataSources>
-    <SqlDataSource ComponentName="DataSource1">
-      <Name>SalesPerson</Name>
+    <SqlDataSource Name="SalesPerson" ComponentName="DataSource1">
       <Connection Name="nwindConnection" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="SalesPerson">
         <Tables>
@@ -13,11 +12,11 @@
           <AllColumns Table="SalesPerson" />
         </Columns>
       </Query>
-      <ConnectionOptions CloseConnection="true" CommandTimeout="0" />
+      <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ShowCaption="false" DataSource="DataSource1" DataMember="SalesPerson">
+    <Grid ComponentName="gridDashboardItem1" Name="Grid with highlighted hovered row" DataSource="DataSource1" DataMember="SalesPerson">
       <InteractivityOptions MasterFilterMode="Single" />
       <DataItems>
         <Dimension DataMember="Sales Person" DefaultId="DataItem0" />
@@ -39,7 +38,7 @@
       <SparklineArgument DefaultId="DataItem3" />
       <GridOptions />
     </Grid>
-    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="DataSource1" DataMember="SalesPerson">
+    <Chart ComponentName="chartDashboardItem1" Name="Animated chart with custom tooltip" DataSource="DataSource1" DataMember="SalesPerson">
       <DataItems>
         <Measure DataMember="Extended Price" DefaultId="DataItem0" />
         <Dimension DataMember="CategoryName" DefaultId="DataItem1" />
@@ -57,7 +56,7 @@
         </Pane>
       </Panes>
     </Chart>
-    <Pie ComponentName="pieDashboardItem1" Name="Pie 1" ShowCaption="false" DataSource="DataSource1" DataMember="SalesPerson">
+    <Pie ComponentName="pieDashboardItem1" Name="Animated pie with enabled legend" DataSource="DataSource1" DataMember="SalesPerson">
       <DataItems>
         <Measure DataMember="Extended Price" DefaultId="DataItem0" />
         <Dimension DataMember="CategoryName" DefaultId="DataItem1" />
