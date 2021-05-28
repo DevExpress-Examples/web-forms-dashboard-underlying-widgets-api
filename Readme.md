@@ -5,7 +5,7 @@
 * [Default.aspx.cs](./CS/ASPxDashboard_UnderlyingWidgets/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxDashboard_UnderlyingWidgets/Default.aspx.vb))
 * [WidgetsCustomization.js](./CS/ASPxDashboard_UnderlyingWidgets/Scripts/WidgetsCustomization.js) (VB: [WidgetsCustomization.js](./VB/ASPxDashboard_UnderlyingWidgets/Scripts/WidgetsCustomization.js))
 <!-- default file list end -->
-# How to access API of underlying widgets in the ASP.NET Web Forms Dashboard Control
+# ASP.NET Web Forms Dashboard Control - How to access API of underlying widgets
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t492396/)**
 <!-- run online end -->
@@ -24,3 +24,9 @@ The customized options are listed below:
 ## Documentation
 
 - [Access to Underlying Widgets in ASP.NET Web Forms](https://docs.devexpress.com/Dashboard/117573/web-dashboard/aspnet-web-forms-dashboard-control/access-to-underlying-widgets)
+
+## More Examples
+
+- [ASP.NET MVC Dashboard Control - How to access API of underlying widgets](https://github.com/DevExpress-Examples/asp-net-mvc-dashboard-underlying-widgets-api)
+- [ASP.NET Core Dashboard Control - How to access API of underlying widgets](https://github.com/DevExpress-Examples/dashboard-react-underlying-widgets-api)
+- [Dashboard Component for React - How to access API of underlying widgets](https://github.com/DevExpress-Examples/asp-net-core-dashboard-underlying-widgets-api)
