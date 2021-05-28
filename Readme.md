@@ -5,7 +5,7 @@
 * [Default.aspx.cs](./CS/ASPxDashboard_UnderlyingWidgets/Default.aspx.cs) (VB: [Default.aspx.vb](./VB/ASPxDashboard_UnderlyingWidgets/Default.aspx.vb))
 * [WidgetsCustomization.js](./CS/ASPxDashboard_UnderlyingWidgets/Scripts/WidgetsCustomization.js) (VB: [WidgetsCustomization.js](./VB/ASPxDashboard_UnderlyingWidgets/Scripts/WidgetsCustomization.js))
 <!-- default file list end -->
-# How to access API of underlying widgets in the ASP.NET Dashboard Control
+# How to access API of underlying widgets in the ASP.NET Web Forms Dashboard Control
 <!-- run online -->
 **[[Run Online]](https://codecentral.devexpress.com/t492396/)**
 <!-- run online end -->
