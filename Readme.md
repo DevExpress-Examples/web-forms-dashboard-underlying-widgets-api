@@ -12,7 +12,7 @@
 <!-- default file list end -->
 # How to access API of underlying widgets in the ASP.NET Dashboard Control
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t492396/)**
+**[[Run Online]](https://codecentral.devexpress.com/128580039/)**
 <!-- run online end -->
 
 
