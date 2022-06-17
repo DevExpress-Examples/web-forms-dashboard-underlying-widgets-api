@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" 
     Inherits="ASPxDashboard_UnderlyingWidgets.Default" %>
 
-<%@ Register Assembly="DevExpress.Dashboard.v21.1.Web.WebForms, Version=21.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
+<%@ Register Assembly="DevExpress.Dashboard.v21.1.Web.WebForms, Version=21.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" 
     Namespace="DevExpress.DashboardWeb" TagPrefix="dx" %>
 
 <!DOCTYPE html>
