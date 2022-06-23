@@ -1,6 +1,6 @@
 function onBeforeRender(s, e) {
     var dashboardControl = s.GetDashboardControl();
-    var viewerApiExtension = dashboardControl.findExtension('viewer-api');
+    var viewerApiExtension = dashboardControl.findExtension('viewerApi');
     if (viewerApiExtension)
         viewerApiExtension.on('itemWidgetOptionsPrepared', customizeWidgetOptions);
 }
