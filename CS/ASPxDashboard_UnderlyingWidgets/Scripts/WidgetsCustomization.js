@@ -1,8 +1,11 @@
 function onBeforeRender(s, e) {
     var dashboardControl = s.GetDashboardControl();
     var viewerApiExtension = dashboardControl.findExtension('viewerApi');
-    if (viewerApiExtension)
+    if (viewerApiExtension) {
         viewerApiExtension.on('itemWidgetOptionsPrepared', customizeWidgetOptions);
+        viewerApiExtension.on('itemWidgetUpdated', customizeWidget);
+        viewerApiExtension.on('itemWidgetCreated', customizeWidget);
+    };
 }
 function customizeWidgetOptions(e) {
     if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GridItem) {
@@ -31,5 +34,11 @@ function customizeWidgetOptions(e) {
             enabled: true,
             duration: 1000
         };
+    }
+}
+function customizeWidget(e) {
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GaugeItem) {
+        var firstGauge = e.getWidget()[0];
+        firstGauge.option('scale.label.font.color','#ef3615');
     }
 }
