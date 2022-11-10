@@ -35,10 +35,21 @@ function customizeWidgetOptions(e) {
             duration: 1000
         };
     }
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GaugeItem) {
+        var gaugesCollection = e.dashboardItem.gauges();
+        gaugesCollection.forEach(element => {
+            if (element.actualValue().dataMember() == 'Extended Price') {
+                e.options.scale.tick.tickInterval = 10000
+            }
+        });
+    }
 }
 function customizeWidget(e) {
     if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GaugeItem) {
-        var firstGauge = e.getWidget()[0];
-        firstGauge.option('scale.label.font.color','#ef3615');
+        var gaugesCollection = e.getWidget();
+        gaugesCollection.forEach(element => {
+            element.option('scale.label.font.weight', '600');
+            
+        });
     }
 }
