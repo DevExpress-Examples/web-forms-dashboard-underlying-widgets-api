@@ -1,8 +1,11 @@
 function onBeforeRender(s, e) {
     var dashboardControl = s.GetDashboardControl();
     var viewerApiExtension = dashboardControl.findExtension('viewerApi');
-    if (viewerApiExtension)
+    if (viewerApiExtension) {
         viewerApiExtension.on('itemWidgetOptionsPrepared', customizeWidgetOptions);
+        viewerApiExtension.on('itemWidgetUpdated', customizeWidget);
+        viewerApiExtension.on('itemWidgetCreated', customizeWidget);
+    };
 }
 function customizeWidgetOptions(e) {
     if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GridItem) {
@@ -31,5 +34,22 @@ function customizeWidgetOptions(e) {
             enabled: true,
             duration: 1000
         };
+    }
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GaugeItem) {
+        var gaugesCollection = e.dashboardItem.gauges();
+        gaugesCollection.forEach(element => {
+            if (element.actualValue().dataMember() == 'Extended Price') {
+                e.options.scale.tick.tickInterval = 10000
+            }
+        });
+    }
+}
+function customizeWidget(e) {
+    if (e.dashboardItem instanceof DevExpress.Dashboard.Model.GaugeItem) {
+        var gaugesCollection = e.getWidget();
+        gaugesCollection.forEach(element => {
+            element.option('scale.label.font.weight', '600');
+            
+        });
     }
 }
