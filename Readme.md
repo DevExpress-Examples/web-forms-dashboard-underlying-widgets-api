@@ -7,7 +7,7 @@
 
 The following example shows how to customize options of underlying widgets in ASP.NET Web Forms.
 
-Use the [ViewerApiExtension.on](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_on) and [ViewerApiExtension.off](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_off) methods to subscribe to and unsubscribe from the events.
+Use the [ViewerApiExtension.on](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_on) and [ViewerApiExtension.off](https://docs.devexpress.com/Dashboard/js-DevExpress.Dashboard.ViewerApiExtension#js_devexpress_dashboard_viewerapiextension_off) methods to subscribe and unsubscribe from the events.
 
 The Web Dashboard renders an underlying widget as follows:
 
